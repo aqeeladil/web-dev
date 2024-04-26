@@ -1,0 +1,52 @@
+<!-- API request and V8 engine -->
+
+<!-- What is API? 
+API is a talking mechanism between two languages or systems
+APIs are mechanisms that enable two software components to communicate with each other 
+using a set of definitions and protocols. For example, the weather bureau's 
+software system contains daily weather data. The weather app on your phone 
+“talks” to this system via APIs and shows you daily weather updates on your phone. -->
+
+<!-- Two example : Restaurant menu, login with google -->
+
+<!-- https://api.github.com/users/aqeeladil -->
+
+<!-- https://randomuser.me -->
+
+<!-- https://jsonformatter.org/ -->
+
+<!-- XmlHttpRequest -->
+
+<!-- https://github.com/v8/v8 -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const myUrl = 'https://api.github.com/users/aqeeladil'        //the datatype of this profile is string
+        
+        const xhr = new XMLHttpRequest();              //XmlHttpRequest is a feature of AJAX  
+        xhr.open('GET', myUrl);
+
+        xhr.onreadystatechange = function(){                // for continuous monitoring
+            console.log(xhr.readyState);                      //in whih stage our request is ?
+            if (xhr.readyState === 4){
+                const data = JSON.parse(this.responseText);            // here parse converts data varible from string to Json datatype
+                console.log(data);
+                console.log(typeof data);
+                console.log(data.location);
+            }
+        }              
+        xhr.send();
+
+    </script>
+</body>
+</html>

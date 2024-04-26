@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Element</title>
+</head>
+<body>
+
+    <script>
+        const myDiv = document.createElement('div');
+        console.log(myDiv);
+        myDiv.className = '';
+        myDiv.id = Math.round(Math.random() * 10) + 1;
+        myDiv.setAttribute('title', 'HuchiBoy');
+        myDiv.style.backgroundColor = 'green';
+        myDiv.style.padding = '12px'
+        
+        // myDiv.innerText = 'Chai Aur Code';          //innerText is acceptable but not recommended in terms of optimization. Instead, use createTextNode
+        const myText = document.createTextNode('Chai aur Code');
+        myDiv.appendChild(myText);                      //this will add myText to myDiv element
+
+        document.body.appendChild(myDiv);                //this will add myDiv element to body element 
+
+
+    </script>
+</body>
+</html>

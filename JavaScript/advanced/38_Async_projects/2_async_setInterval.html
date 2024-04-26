@@ -1,0 +1,72 @@
+<!-- setInterval -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async tutorial</title>
+</head>
+<body>
+    <h1>Set Interval</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+
+    <script>
+
+        //++++++++++++++++++++++++++++++++ setInterval ++++++++++++++++++++++
+
+        // setInterval(()=>{
+        //     console.log('Hitesh')
+        // },2000)
+
+        // ++++++++++++++++++++++++++++++++
+
+        // const sayDate = function (str){
+        //     console.log(str, Date.now())
+        // }
+
+        // setInterval(sayDate, 2000);
+
+
+        // +++++++++++++++++++++++++++++++
+
+        const say_Now = function(b){
+            console.log(b, Date.now())
+        }
+        // setInterval(say_Now, 3000, 'huchiboy');
+
+
+        // +++++++++++++++++++++ clearInterval ++++++++++++++++
+
+        const my_Interval = setInterval(say_Now, 3000, 'huchiboy');
+
+        //clearInterval(my_Interval);
+
+
+        // TASK +++++++++++++++++++++ clearInterval for an event ++++++++++++++
+
+        document.querySelector('#start').addEventListener('click',function(){
+            setInterval(say_Now, 3000, 'huchiboy');
+            console.log('Started')
+            
+            
+        })
+
+        document.querySelector('#stop').addEventListener('click',function(){
+            clearInterval(my_Interval);
+            console.log('STOPPED')
+        })
+
+
+
+
+        
+        
+        
+    
+    </script>
+</body>
+</html>

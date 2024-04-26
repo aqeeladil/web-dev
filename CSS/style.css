@@ -1,0 +1,68 @@
+
+
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%; }
+
+ /* #kaka {
+    width: 50%;
+    height: 50%;
+    background-color: blue;
+} */
+
+/* #jee {
+    width: 100%;
+    height: 100%;
+    background-image: url(https://cdn-prod.medicalnewstoday.com/content/images/articles/325/325466/man-walking-dog.jpg);
+    background-size: cover;
+    background-position: center;
+      
+} */
+
+
+ #flexbox {
+    width: 1000px;
+    height: 1000px;
+    background-color: blue;
+    display: flex;
+    justify-content: center ;
+    text-align: center ; 
+
+}
+
+#box1 {
+    height: 100px;
+    width: 100px;
+    background-color: hotpink;
+
+}
+#box2 {
+    height: 100px;
+    width: 100px;
+    background-color: green;
+
+}
+#box3 {
+    height: 100px;
+    width: 100px;
+    background-color: khaki;
+
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,60 @@
+<!-- setTimeOut -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async tutorial</title>
+</head>
+<body>
+    <h1>Set time out</h1>
+    <button id="stop">Stop</button>
+
+
+    <script>
+
+        //++++++++++++++++++++++ setTimeOut +++++++++++++++++
+
+        // setTimeout(() => {
+        //     console.log('Aqeel')
+        // }, 2000);
+
+        //++++++++++++++++++++++++++++++++++++++++++++++
+
+        // const sayAqeel = () => {
+        //     console.log('Aqeel')
+        // }
+        // setTimeout(sayAqeel, 2000);
+
+        // ++++++++++++++++++++++++++++++++++++++++++++++++
+
+        const changeText = function () {
+            document.querySelector('h1').innerHTML = 'Best JS series'
+        }
+
+        //setTimeout(changeText, 6000);
+
+        // ++++++++++++++++++++++= clearTimeOut +++++++++++++++++
+        // it means that do not implement the instructions given in setTimeOut
+
+        const changeMe = setTimeout(changeText, 6000);
+
+        //clearTimeout(changeMe)
+
+        // +++++++++++++++++++++ clearTimeOut for an event ++++++++++++++
+
+        document.querySelector('#stop').addEventListener('click',function(){
+            clearTimeout(changeMe);
+            console.log('STOPPED')
+        })
+
+
+
+        
+
+
+    </script>
+</body>
+</html>
